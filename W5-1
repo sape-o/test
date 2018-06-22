@@ -1,0 +1,33 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+entity no6 is
+port (sh, lr, reset, clk: in std_logic;
+yout : out std_logic_vector(7 downto 0));
+end no6;
+architecture beh of no6 is
+signal q : std_logic_vector(7 downto 0);
+begin
+PROCESS (clk,reset)
+BEGIN
+IF(reset = '0') THEN
+q <= "00000001";
+ELSE
+IF(CLK'EVENT and CLK = '1') THEN
+IF sh = '1' THEN
+IF lr = '0' THEN
+q(7) <= q(0);
+q(6 downto 0)<=q(7 downto 1);
+ELSE
+q(0) <= q(7);
+q(7 downto 1)<=q(6 downto 0);
+END IF;
+ELSE
+q <= q;
+END IF;
+ELSE
+q <= q;
+END IF;
+END IF;
+END PROCESS;
+yout <= q;
+end beh;
