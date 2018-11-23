@@ -1,0 +1,44 @@
+<mat-tab-group class=" w3-blue w3-border w3-round">
+  <mat-tab class="mat-tab-label" label="ลูกค้า">
+
+    <table mat-table  [dataSource]="dataSource" class="mat-elevation-z8">
+      <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef> name </th>
+        <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+      </ng-container>
+      <ng-container matColumnDef="phonenumber">
+        <th mat-header-cell *matHeaderCellDef> phonenumber </th>
+        <td mat-cell *matCellDef="let element"> {{element.phonenumber}} </td>
+      </ng-container>
+      <ng-container matColumnDef="idCardNumber">
+        <th mat-header-cell *matHeaderCellDef> idCardNumber </th>
+        <td mat-cell *matCellDef="let element"> {{element.idCardNumber}} </td>
+      </ng-container>
+      <ng-container matColumnDef="address">
+        <th mat-header-cell *matHeaderCellDef> address </th>
+        <td mat-cell *matCellDef="let element"> {{element.address}} </td>
+      </ng-container>
+      <ng-container matColumnDef="age">
+        <th mat-header-cell *matHeaderCellDef> age </th>
+        <td mat-cell *matCellDef="let element"> {{element.age}} </td>
+      </ng-container>
+      <ng-container matColumnDef="birthday">
+        <th mat-header-cell *matHeaderCellDef> birthday </th>
+        <td mat-cell *matCellDef="let element"> {{element.birthday| date:"dd/MM/yyyy" }} </td>
+      </ng-container>
+      <ng-container matColumnDef="career">
+        <th mat-header-cell *matHeaderCellDef> career </th>
+        <td mat-cell *matCellDef="let element"> {{element.career}} </td>
+      </ng-container>
+      <ng-container matColumnDef="gender">
+        <th mat-header-cell *matHeaderCellDef> gender </th>
+        <td mat-cell *matCellDef="let element"> {{element.gender.gender}} </td>
+      </ng-container>
+      <tr mat-header-row *matHeaderRowDef="discal"></tr>
+      <tr mat-row *matRowDef="let row; columns: discal;"></tr>
+    </table>
+</mat-tab>
+
+<mat-tab label="พนักงาน"> Content 2 </mat-tab>
+
+</mat-tab-group>

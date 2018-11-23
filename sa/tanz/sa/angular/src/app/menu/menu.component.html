@@ -1,0 +1,79 @@
+
+<div class="w3-display-middle">
+<mat-card class="card2">
+  <div style="text-align:center">
+    <div class="w3-display-middle">
+      <br><br><br><br><br><br><br><br>
+      <form class="example-form" [formGroup]="Person">
+
+      <div></div>
+<br>
+      <mat-form-field class="example-full-width">
+        <input matInput placeholder="name" class="w3-input" formControlName = "name">
+      </mat-form-field>
+
+      <br>
+
+        <mat-form-field>
+            <mat-select formControlName="gender">
+              <mat-option value="">Select your gender</mat-option>
+              <mat-option value="Male">Male</mat-option>
+              <mat-option value="Female">Female</mat-option>
+            </mat-select>
+       </mat-form-field>
+
+
+       <br>
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="idCardNumber" formControlName = "idCardNumber">
+          </mat-form-field>
+
+          <br>
+            <mat-form-field class="example-full-width">
+              <input matInput placeholder="address" formControlName= "address">
+            </mat-form-field>
+
+            <br>
+      &nbsp;&nbsp;&nbsp;&nbsp;
+      <mat-form-field class="example-full-width">
+        <input matInput [matDatepicker]="picker" placeholder="Choose a date" formControlName= "date" >
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+  <br>
+
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="PhoneNumber" formControlName = "PhoneNumber">
+        </mat-form-field>
+
+        <br>
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="e-mail" formControlName = "email">
+        </mat-form-field>
+
+        <br>
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="password" formControlName = "password">
+        </mat-form-field>
+
+        <br>
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="Age" formControlName = "Age">
+        </mat-form-field>
+
+        <br>
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="career" formControlName = "career">
+        </mat-form-field>
+      </form>
+
+
+      <div style="text-align:center;">
+
+        <button mat-button class="w3-button w3-blue w3-margin w3-hover-pale-blue:hover" (click)="save()" >submit</button>
+        <a mat-button routerLink='/login' class="w3-button w3-red " routerLinkActive= 'primary'>back</a>
+      </div>
+    </div>
+  </div>
+</mat-card>
+</div>

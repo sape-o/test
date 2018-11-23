@@ -1,0 +1,29 @@
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+  font-color: black;
+}
+.example-full-width {
+   min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+}
+.center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 100px;
+  text-align: center;
+  font-size: 18px;
+}
+.card2{
+
+  width: 1500px;
+  height : 750px;
+  background-color: rgb(248, 125, 125);
+}
+
+.abc{
+  font-size: 20px;
+}
