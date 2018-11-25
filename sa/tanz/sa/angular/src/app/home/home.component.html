@@ -1,12 +1,55 @@
-<h3>ยินดีต้อนรับเข้าสู่ระบบ</h3>
-<mat-toolbar >ระบบเช่าบ้าน</mat-toolbar>
-<div class="w3-display-middle card1">
+<div *ngIf="this.user.tpyeperson.typepersonId==1 ||this.user.tpyeperson.typepersonId==2">
+    <h3>ยินดีต้อนรับเข้าสู่ระบบ คุณ {{this.user.name}}
+    </h3>
 
-  <button class="w3-btn w3-white w3-border w3-round-large" >สัญญาบ้านเช่า </button><br><br>
-  <button class="w3-btn w3-white w3-border w3-round-large" > การจ่ายเงินค่าบ้านเช่า </button><br>
-  <br><button class="w3-btn w3-white w3-border w3-round-large" > เก็บข้อมูลของบ้านเช่า </button><br>
+    <mat-toolbar >ระบบเช่าบ้าน <a class='abc'routerLink='/login' class="right" mat-button routerLinkActive ="accent">Logout</a></mat-toolbar>
+    <div class="w3-display-middle card1">
+
+
+
+    <br><button class="w3-btn w3-white w3-border w3-round-large" routerLink= '/emregis'> เพิ่มพนักงาน </button><br><br>
+    <button class="w3-btn w3-white w3-border w3-round-large" >สัญญาบ้านเช่า </button><br><br>
+    <button class="w3-btn w3-white w3-border w3-round-large" > การจ่ายเงินค่าบ้านเช่า </button><br>
+    <br><button class="w3-btn w3-white w3-border w3-round-large" > เก็บข้อมูลของบ้านเช่า </button><br>
     <br><button class="w3-btn w3-white w3-border w3-round-large" > เเจ้งซ่อม </button><br>
+
     <br><button class="w3-btn w3-white w3-border w3-round-large" routerLink= '/tenantin'> ข้อมูลผู้เช่า - พนักงาน </button><br>
-    <br><button class="w3-btn w3-white w3-border w3-round-large" > จองบ้านออนไลน์ </button><br>
+
+  </div>
+</div>
+
+<div *ngIf="this.user.tpyeperson.typepersonId==3">
+  <h3>ยินดีต้อนรับเข้าสู่ระบบ คุณ {{this.user.name}}</h3>
+
+
+  <div>
+     <a routerLink='/login' class="w3-btn w3-red w3-border w3-round-large" mat-button routerLinkActive ="accent">Logout</a>
+  <br><br><button class="w3-btn w3-blue w3-border w3-round-large" > จองบ้านออนไลน์ </button><br>
+  </div>
+  <br/><br/>
+  <table border=1 width="100%">
+    <tr>
+      <th>name</th>
+      <th>phonenumber</th>
+      <th>idCardNumber</th>
+      <th>address</th>
+      <th>age</th>
+      <th>birthday</th>
+      <th>career</th>
+      <th>gender</th>
+    </tr>
+    <tr>
+      <td>{{this.user.name}}</td>
+      <td>{{this.user.phonenumber}}</td>
+      <td>{{this.user.idCardNumber}}</td>
+      <td>{{this.user.address}}</td>
+      <td>{{this.user.age}}</td>
+      <td>{{this.user.birthday| date:"dd/MM/yyyy" }}</td>
+      <td>{{this.user.career}}</td>
+      <td>{{this.user.gender.gender}}</td>
+    </tr>
+
+  </table>
+  <br/>
 
 </div>

@@ -17,6 +17,7 @@ import {MatTabsModule} from '@angular/material/tabs';
 import { MenuComponent } from './menu/menu.component';
 import { HomeComponent } from './home/home.component';
 import { TenantinComponent } from './tenantin/tenantin.component';
+import { EmregisComponent } from './emregis/emregis.component';
 
 
 
@@ -31,6 +32,7 @@ const appRoutes: Routes = [
     MenuComponent,
     HomeComponent,
     TenantinComponent,
+    EmregisComponent,
 ],
   imports: [
     MatTabsModule,

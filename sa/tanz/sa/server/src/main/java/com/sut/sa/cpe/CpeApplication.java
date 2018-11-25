@@ -38,7 +38,7 @@ public class CpeApplication {
             e.setNameType("employeePosition");
             TypePerson e1 = new TypePerson();
             e1.setNameType("HouseOwner");
-            TypePerson e2 = new TypePerson();
+            TypePerson    e2 = new TypePerson();
             e2.setNameType("LesseeInformation");
 
             typePersonRepository.save(e);

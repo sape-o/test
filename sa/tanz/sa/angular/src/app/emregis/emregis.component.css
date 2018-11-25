@@ -1,0 +1,11 @@
+.example-form {
+  min-width: 1000px;
+  max-width: 750px;
+  width: 100%;
+}
+.card2{
+ width: 1500px;
+  height : 750px;
+  forn-color: black;
+  background-color: rgb(187, 107, 54);
+}

@@ -12,10 +12,9 @@ import { MatTableModule } from '@angular/material';
 export class TenantinComponent implements OnInit {
 
   user : Array<any>;
-  discal: string[] = ['name','phonenumber','idCardNumber','address', 'age','birthday','career','gender'];
+  discal: string[] = ['name','phonenumber','idCardNumber','address', 'age','birthday','career','gender','type'];
 
   dataSource =this.user;
-
 
   constructor(
 

@@ -2,29 +2,30 @@
   <mat-card class="card2">
     <div class="w3-display-middle">
       <font color="black">
-      <h4 style="text-align:center;">
-        Sign in
-      </h4>
+        <h4 style="text-align:center;">
+          Sign in
+        </h4>
       </font>
-    <form class="example-form" >
-
-      <mat-form-field class="example-full-width">
-        <input matInput placeholder="Username">
-      </mat-form-field>
-      <mat-form-field class="example-full-width">
-        <input matInput placeholder="Password">
-      </mat-form-field>
-      <div style="text-align:center;">
-      <button mat-flat-button  routerLink='/home' routerLinkActive ='primary' >Login</button>
+      <form class="example-form" [formGroup]="Person" >
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="Email" class="w3-input" formControlName = "email">
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="Password" class="w3-input" type="password" formControlName = "password">
+        </mat-form-field>
+        <div style="text-align:center;">
+        <button mat-flat-button (click)="login()"  routerLinkActive ='primary' >Login</button>
         <br><br>
-  </div>
+        </div>
+    </form>
+
   <div style="text-align:center;">
     <font color="black">
      <a class='abc'mat-button routerLink='/menu' routerLinkActive ="accent">Register</a>
-      <a class='abc' mat-button="accent">Menu</a>
+    
     </font>
   </div>
-    </form>
+
     </div>
   </mat-card>
 </div>

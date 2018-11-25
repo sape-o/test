@@ -15,4 +15,8 @@ export class RentService{
     getmenu(name:string,gender:string,idCardNumber:string,address:string,date:Date,PhoneNumber:string,email:string,password:string,age:number,career:string): Observable<any> {
         return this.http.get("//localhost:8080/InformationPerson/"+name+"/"+gender+"/"+idCardNumber+"/"+address+"/"+date+"/"+PhoneNumber+"/"+email+"/"+password+"/"+age+"/"+career);
       }
+
+    getInformation(id): Observable<any> {
+      return this.http.get("http://localhost:8080/InformationPerson/" + id);
+    }
 }
